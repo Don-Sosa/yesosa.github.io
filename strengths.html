@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="navbar.css" />
+    <title>Portfolio Website</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo"><a href="#">Portfolio Page</a></div>
+        <ul class="links">
+          <li><a href="./index.html">About Me</a></li>
+          <li><a href="./strengths.html">Strengths</a></li>
+          <li><a href="./weaknesses.html">Weaknesses</a></li>
+          <li><a href="./PastAndExperiences.html">Past and Experiences</a></li>
+          <li><a href="./contact.html">Contact Me</a></li>
+        </ul>
+        <a href="#" class="action_btn">Get Started</a>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+
+      <div class="dropdown_menu">
+        <ol>
+          <li><a href="./index.html">About Me</a></li>
+          <li><a href="./strengths.html">Strengths</a></li>
+          <li><a href="./weaknesses.html">Weaknesses</a></li>
+          <li><a href="./contact.html">Contact Me</a></li>
+          <li><a href="#" class="action_btn">Explore</a></li>
+        </ol>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero">
+        <h1 class="header_strength">Strengths</h1>
+        <p class="paragraph_2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam,
+          repellendus repudiandae. Quasi, atque. Earum aperiam corrupti sit
+          maxime alias, provident rem dignissimos eveniet iusto, nisi dolore
+          veniam aliquid dolores nemo reprehenderit. Voluptatum tempore
+          cupiditate magnam aspernatur nihil tempora ipsam voluptatibus pariatur
+          excepturi voluptate at dicta illo numquam sapiente ut, consectetur
+          sunt recusandae ad veritatis exercitationem nisi veniam totam. Nihil
+          vel vero animi voluptates magni fugiat voluptas quasi aspernatur.
+          Recusandae libero sint dolor suscipit ut praesentium, perferendis
+          laboriosam odit reprehenderit, illo, perspiciatis beatae alias non
+          itaque atque quisquam nam veniam voluptate maiores facilis quas. Iure
+          dolore commodi non aperiam facilis eius rem consequuntur ratione minus
+          cum magni, labore recusandae sit corporis voluptatibus sunt sequi amet
+          adipisci corrupti. Quo eum laborum ad beatae minima eos alias tempore
+          omnis excepturi, dolorem libero similique veritatis cumque vel sit
+          tenetur earum fugit fugiat quas inventore iure! Voluptates, quibusdam
+          sint! Harum placeat deserunt cumque consectetur illo.
+        </p>
+      </section>
+    </main>
+    <script>
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const dropDownMenu = document.querySelector(".dropdown_menu");
+
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle("open");
+        const isOpen = dropDownMenu.classList.contains("open");
+
+        toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
+  </body>
+</html>
